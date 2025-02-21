@@ -16,6 +16,7 @@ const SocialLogin = () => {
         googleSignIn()
             .then(result => {
                 // console.log(result.user)
+                setUser(result.user)
                 navigate(location?.state ? location.state : '/')
                 toast.success('Google Login Successfull')
             })

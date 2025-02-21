@@ -28,9 +28,7 @@ const Mainlayout = () => {
         <div className="lg:flex md:flex">
             {/* dashboard side bar */}
             <div className="lg:w-64 md:w-64 lg:min-h-screen md:min-h-screen bg-green-300">
-                <div className="flex justify-center mt-4">
-                    <h3 className="text-xl font-bold">JOB FLOW</h3>
-                </div>
+                <h3 className="text-xl text-center font-bold lg:mt-4 md:mt-4">JOB FLOW</h3>
                 <ul className="menu text-black">
                     <li><NavLink to="myprofile"><CgProfile />My Profile</NavLink></li>
                     <li><Link to="/"><FaHome></FaHome>Home</Link></li>
@@ -38,7 +36,7 @@ const Mainlayout = () => {
                 </ul>
             </div>
             {/* dashboard content */}
-            <div className="flex-1 lg:p-8 p-5 bg-base-300">
+            <div className="flex-1 lg:p-8 p-5 bg-base-300 min-h-screen">
                 <Outlet></Outlet>
             </div>
         </div>
