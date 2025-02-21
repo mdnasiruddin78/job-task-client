@@ -10,13 +10,11 @@ import { toast } from "react-toastify";
 const Mainlayout = () => {
 
     const { logoutUser } = useContext(authContext)
-    const navigate = useNavigate()
 
     const handleLogout = () => {
         logoutUser()
             .then(result => {
                 // console.log(result.user)
-                navigate("/login")
                 toast.error('Logout Successfull')
             })
             .catch(error => {

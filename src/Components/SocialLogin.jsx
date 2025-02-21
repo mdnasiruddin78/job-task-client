@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useLocation, useNavigate } from "react-router-dom";
 import loginImage from '../assets/Tablet login-amico.png';
 import { authContext } from "../Provider/Authprovider";
+import UseAxiosPublick from "../Hooks/UseAxiosPublick";
 
 
 const SocialLogin = () => {
@@ -11,6 +12,7 @@ const SocialLogin = () => {
     const { googleSignIn, setUser } = useContext(authContext)
     const location = useLocation()
     const navigate = useNavigate()
+    const axiosPublic = UseAxiosPublick()
 
     const handleGoogleLogin = () => {
         googleSignIn()
@@ -18,7 +20,18 @@ const SocialLogin = () => {
                 // console.log(result.user)
                 setUser(result.user)
                 navigate(location?.state ? location.state : '/')
-                toast.success('Google Login Successfull')
+                const userInfo = {
+                    email: result.user?.email,
+                    name: result.user?.displayName,
+                    userId: result.user?.uid,
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.insertedId) {
+                            toast.success('Google Login Successfull')
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error.message)
