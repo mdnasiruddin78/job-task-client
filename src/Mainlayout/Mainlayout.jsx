@@ -19,7 +19,7 @@ const Mainlayout = () => {
                 toast.error('Logout Successfull')
             })
             .catch(error => {
-                console.log(error.message)
+                // console.log(error.message)
             })
     }
 

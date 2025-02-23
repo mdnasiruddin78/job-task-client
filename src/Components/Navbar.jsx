@@ -36,7 +36,7 @@ const Navbar = () => {
         // console.log(addTask)
         axiosPublic.post('/addTask', addTask)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 if (res.data.insertedId) {
                     toast.success('Task Added Successfully!')
                     navigate('/manageTask')

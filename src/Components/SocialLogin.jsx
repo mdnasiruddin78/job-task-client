@@ -27,12 +27,12 @@ const SocialLogin = () => {
                 }
                 axiosPublic.post('/users', userInfo)
                     .then(res => {
-                        console.log(res.data)
+                        // console.log(res.data)
                         toast.success('Google Login Successfull')
                     })
             })
             .catch(error => {
-                console.log(error.message)
+                // console.log(error.message)
             });
     }
 
