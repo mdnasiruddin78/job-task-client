@@ -1,5 +1,5 @@
 ### 🎨 project overview :
-- Thiis is a Job task Application.A user can add a job task and all user seen the task.In this application major feature is task drag and drop.user drag a task and drop to another category and same time update the task category.
+- Thiis is a Task Management Application.A user can add a job task and all user seen the task.In this application major feature is task drag and drop.user drag a task and drop to another category and same time update the task category.
 
 ---
 
@@ -15,9 +15,7 @@
 - MongoDB
 - express.js
 
-
 ---
-
 
 ### Dependencies : 
 - @heroicons/react
