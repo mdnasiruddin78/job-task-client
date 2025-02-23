@@ -19,7 +19,7 @@ const Lefttodo = () => {
         <div>
             <h3 className="text-lg font-semibold text-black text-center"><u>To-Do
             </u></h3>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-4 p-3">
                 {
                     todos.map(todo => <TodoCard key={todo._id} todo={todo}></TodoCard>)
                 }

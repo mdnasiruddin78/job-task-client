@@ -33,8 +33,8 @@ const TodoCard = ({ todo }) => {
 
     return (
         <div className="p-3 rounded-xl bg-gray-400 shadow-lg">
-            <div className="flex justify-between items-center">
-                <p className="text-black">{timeAgo(newDate)}</p>
+            <div className="flex justify-between items-center mb-2">
+                <p className="text-black">Time: {timeAgo(newDate)}</p>
                 <h2 className="text-black text-sm bg-red-400 px-2 rounded-md">{category}</h2>
             </div>
             <p className="text-black font-semibold">Title: {title}</p>

@@ -19,7 +19,7 @@ const Rightdone = () => {
         <div>
             <h3 className="text-lg font-semibold text-black text-center"><u>Done
             </u></h3>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-4 p-2">
                 {
                     dones.map(done => <DoneCard key={done._id} done={done}></DoneCard>)
                 }
