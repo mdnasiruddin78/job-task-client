@@ -35,7 +35,7 @@ const DoneCard = ({ done }) => {
         <div className="p-3 rounded-xl bg-gray-400 shadow-lg">
             <div className="flex justify-between items-center mb-2">
                 <p className="text-black">Time: {timeAgo(newDate)}</p>
-                <h2 className="text-black text-sm bg-green-400 px-2 rounded-md">{category}</h2>
+                <h2 className="text-white font-medium text-sm bg-green-400 px-2 rounded-md">{category}</h2>
             </div>
             <p className="text-black font-semibold">Title: {title}</p>
             <p className="text-black">Description: {description}</p>
