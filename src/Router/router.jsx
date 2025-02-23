@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Privateroute><Home></Home></Privateroute>,
       },
       {
-        path: "/myTask",
+        path: "/manageTask",
         element: <Privateroute><MyAddedTask></MyAddedTask></Privateroute>,
       },
     ]

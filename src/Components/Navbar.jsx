@@ -11,6 +11,7 @@ import {
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import UseAxiosPublick from "../Hooks/UseAxiosPublick";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -21,6 +22,7 @@ const Navbar = () => {
     const { register, handleSubmit } = useForm();
     const [categorys, setCategorys] = useState('')
     const axiosPublic = UseAxiosPublick()
+    const navigate = useNavigate()
 
     const onSubmit = data => {
         // console.log(data)
@@ -37,6 +39,7 @@ const Navbar = () => {
                 console.log(res.data)
                 if (res.data.insertedId) {
                     toast.success('Task Added Successfully!')
+                    navigate('/manageTask')
                 }
             })
     }

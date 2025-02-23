@@ -31,7 +31,7 @@ const Mainlayout = () => {
                 <ul className="menu text-black">
                     <li><Link to="/"><FaHome></FaHome>Home</Link></li>
                     <li><Link to="/"><CgProfile />My Profile</Link></li>
-                    <li><Link to="/myTask"><MdOutlineAddTask />My Added Task</Link></li>
+                    <li><Link to="/manageTask"><MdOutlineAddTask />Manage Tasks</Link></li>
                     <li><button className="font-bold flex items-center" onClick={handleLogout}><FiLogOut />Logout</button></li>
                 </ul>
             </div>
