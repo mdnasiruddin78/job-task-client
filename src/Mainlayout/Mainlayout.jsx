@@ -5,6 +5,7 @@ import { authContext } from "../Provider/Authprovider";
 import { useContext } from "react";
 import { CgProfile } from "react-icons/cg";
 import { toast } from "react-toastify";
+import { MdOutlineAddTask } from "react-icons/md";
 
 
 const Mainlayout = () => {
@@ -28,8 +29,9 @@ const Mainlayout = () => {
             <div className="lg:w-64 md:w-64 lg:min-h-screen md:min-h-screen bg-green-300">
                 <h3 className="text-xl text-center font-bold lg:mt-4 md:mt-4">JOB FLOW</h3>
                 <ul className="menu text-black">
-                    <li><NavLink to="myprofile"><CgProfile />My Profile</NavLink></li>
                     <li><Link to="/"><FaHome></FaHome>Home</Link></li>
+                    <li><Link to="/"><CgProfile />My Profile</Link></li>
+                    <li><Link to="/myTask"><MdOutlineAddTask />My Added Task</Link></li>
                     <li><button className="font-bold flex items-center" onClick={handleLogout}><FiLogOut />Logout</button></li>
                 </ul>
             </div>

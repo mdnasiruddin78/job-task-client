@@ -29,6 +29,7 @@ const Navbar = () => {
             category: categorys,
             description: data.description,
             time: Date(),
+            email: user?.email,
         }
         // console.log(addTask)
         axiosPublic.post('/addTask', addTask)
@@ -78,6 +79,7 @@ const Navbar = () => {
                                 type="text"
                                 value={categorys}
                                 onChange={e => setCategorys(e.target.value)}
+                                required
                                 className="select select-bordered w-full max-w-xs">
                                 <option value=''>Category</option>
                                 <option value='To-Do'>To-Do</option>
