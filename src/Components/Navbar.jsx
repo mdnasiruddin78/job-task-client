@@ -41,7 +41,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="border-2 border-gray-500 bg-white p-2 rounded-md">
+        <div className="">
             <div className="flex justify-end space-x-3">
                 <Button onClick={handleOpen} variant="gradient">
                     Add task
